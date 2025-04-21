@@ -141,7 +141,6 @@ public class EventController {
 
     @PostMapping
     public Event createEvent(@RequestBody CreateEventRequest request) {
-        // Используем метод createEvent из сервиса, который уже создаёт объект Event
         return eventService.createEvent(request);
     }
 
@@ -181,16 +180,16 @@ public class EventController {
     public ResponseEntity<DressCodeDTO> getDressCode(@PathVariable UUID eventId) {
         return eventService.getEventById(eventId)
                 .map(event -> {
-                    DressCode dressCode = event.getDressCode(); // Получаем dressCode из события
+                    DressCode dressCode = event.getDressCode();
                     if (dressCode == null) {
-                        return ResponseEntity.notFound().<DressCodeDTO>build(); // Указываем тип для ResponseEntity
+                        return ResponseEntity.notFound().<DressCodeDTO>build();
                     }
-                    DressCodeDTO dto = new DressCodeDTO(); // Создаем DTO
-                    dto.setType(dressCode.getType()); // Устанавливаем тип
-                    dto.setComment(dressCode.getComment()); // Устанавливаем комментарий
-                    return ResponseEntity.ok(dto); // Возвращаем 200 с DTO
+                    DressCodeDTO dto = new DressCodeDTO();
+                    dto.setType(dressCode.getType());
+                    dto.setComment(dressCode.getComment());
+                    return ResponseEntity.ok(dto);
                 })
-                .orElse(ResponseEntity.notFound().<DressCodeDTO>build()); // Указываем тип для ResponseEntity
+                .orElse(ResponseEntity.notFound().<DressCodeDTO>build());
     }
 
 

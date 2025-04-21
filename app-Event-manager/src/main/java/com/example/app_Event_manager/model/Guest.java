@@ -13,6 +13,9 @@ public class Guest {
     private Gender gender;
     private String comment;
 
+    public Guest() {
+        // для тестов
+    }
     public Guest(UUID id, String firstName, String lastName, String email, int age, Gender gender, String comment) {
         this.id = id;
         this.firstName = firstName;

@@ -42,7 +42,6 @@ public class FullBudgetCalculationResult {
         System.out.println("Получен бюджет: " + totalBudget);
     }
 
-    // геттеры
 
     public double getTotalBudget() { return totalBudget; }
     public double getVenueBudget() { return venueBudget; }

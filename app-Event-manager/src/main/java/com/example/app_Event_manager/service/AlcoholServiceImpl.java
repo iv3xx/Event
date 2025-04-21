@@ -3,8 +3,7 @@ package com.example.app_Event_manager.service;
 
 import com.example.app_Event_manager.model.Guest;
 import com.example.app_Event_manager.model.enums.Gender;
-import com.example.app_Event_manager.service.AlcoholService;
-import com.example.app_Event_manager.service.AlcoholCalculationResult;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;

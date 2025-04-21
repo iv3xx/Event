@@ -4,7 +4,6 @@ public class OrganizerDTO {
     private String name;
     private String email;
 
-    // геттеры и сеттеры
     public String getName() {
         return name;
     }

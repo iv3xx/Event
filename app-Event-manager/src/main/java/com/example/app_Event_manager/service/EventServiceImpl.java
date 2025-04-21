@@ -132,7 +132,7 @@ public class EventServiceImpl implements EventService {
         event.setDressCode(request.getDressCode());
         event.setGuests(request.getGuests());
         event.setOrganizers(request.getOrganizers());
-        return eventRepository.save(event); // Сохранение в базе данных
+        return eventRepository.save(event);
     }
 
     @Override

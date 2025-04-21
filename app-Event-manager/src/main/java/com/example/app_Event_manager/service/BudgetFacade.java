@@ -20,7 +20,7 @@ public class BudgetFacade {
     }
 
     public FullBudgetCalculationResult calculateFullBudget(List<Guest> guests, double totalBudget) {
-        // Примерные проценты по категориям
+        // проценты по категориям
         double venueBudget = totalBudget * 0.35;
         double decorBudget = totalBudget * 0.15;
         double photoVideoBudget = totalBudget * 0.10;
@@ -29,11 +29,10 @@ public class BudgetFacade {
         double transportBudget = totalBudget * 0.05;
         double attireBudget = totalBudget * 0.10;
 
-        // Бюджет на банкетное меню = venueBudget
+        // Бюджет на банкетное меню (venueBudget)
         double alcoholBudget = venueBudget * 0.4;
         double dessertBudget = venueBudget * 0.2;
         double snackBudget = venueBudget * 0.4;
-
         // Расчёты
         AlcoholCalculationResult alcohol = alcoholService.calculateAlcoholDistribution(guests, alcoholBudget);
         double dessertsCost = dessertService.calculateTotalCost(guests, dessertBudget);

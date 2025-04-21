@@ -6,7 +6,7 @@ public class DressCodeDTO {
     private DressCodeType type;
     private String comment;
 
-    // геттеры и сеттеры
+
     public DressCodeType getType() {
         return type;
     }
